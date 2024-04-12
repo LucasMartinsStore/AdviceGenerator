@@ -10,7 +10,8 @@
   --color-dark-blue: hsl(218, 23%, 16%);
 
   /*Typography */
-  --typography-standard: "Manrope", sans-serif;
+  --typography-family: "Manrope", sans-serif;
+  --typography-standard: 2.8rem;
 }
 * {
   margin: 0;
@@ -20,4 +21,5 @@
 
 html {
   font-size: 62.5%;
+  font-family: var(--typography-standard);
 }
