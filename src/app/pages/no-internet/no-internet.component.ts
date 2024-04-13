@@ -1,5 +1,7 @@
+import { IsInternetService } from './../../shared/service/is-internet/is-internet.service';
+import { Router } from '@angular/router';
 import { TextStatic } from './../../shared/text-static/text-static';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-no-internet',
@@ -8,7 +10,13 @@ import { Component } from '@angular/core';
   templateUrl: './no-internet.component.html',
   styleUrl: './no-internet.component.scss',
 })
-export class NoInternetComponent {
+export class NoInternetComponent implements OnInit {
   title = TextStatic.TITLE_NO_INTERNET;
   content = TextStatic.NO_INTERNET_CONTENT;
+  button = TextStatic.BUTTON_NO_INTERNET;
+  constructor(private isInternetService: IsInternetService) {}
+
+  ngOnInit(): void {
+    this.isInternetService.isVerifyConnection();
+  }
 }

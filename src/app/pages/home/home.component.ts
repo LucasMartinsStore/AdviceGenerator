@@ -1,3 +1,4 @@
+import { IsInternetService } from './../../shared/service/is-internet/is-internet.service';
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
@@ -11,15 +12,9 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private isInternetService: IsInternetService) {}
 
   ngOnInit(): void {
-    window.addEventListener('offline', () => this.checkedOnlineStatus());
-  }
-
-  checkedOnlineStatus() {
-    if (!navigator.onLine) {
-      this.router.navigateByUrl('/no-internet');
-    }
+    this.isInternetService.isVerifyConnection();
   }
 }
