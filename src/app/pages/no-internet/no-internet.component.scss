@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1,
+p {
+  font-size: var(--typography-standard);
+  margin-top: 1.6rem;
+}
+
+h1 {
+  color: var(--color-neon-green);
+}
+
+p {
+  color: var(--color-light-cyan);
+}
+
+svg {
+  width: 10rem;
+  height: 10rem;
+}
