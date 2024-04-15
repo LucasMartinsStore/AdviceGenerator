@@ -1,15 +1,20 @@
 .container-card {
   background-color: var(--color-dark-grayish-blue);
   width: 50rem;
-  height: 50rem;
+  min-height: 30.5rem;
   text-align: center;
   padding: 4rem;
+  margin-top: 4rem;
 }
 
 h1 {
   margin-bottom: 1.6rem;
   color: var(--color-neon-green);
   letter-spacing: 0.4rem;
+}
+
+.disabledButton {
+  background-color: hsl(150, 100%, 45%);
 }
 
 h1,

@@ -1,8 +1,6 @@
 <div class="container-card">
   <h1>Advice # {{ slipList.slip.id }}</h1>
-  <p>
-    {{ slipList.slip.advice }}
-  </p>
+  <p>" {{ slipList.slip.advice }}"</p>
   <div class="container-image">
     <img
       src="./../../../assets/images/pattern-divider-desktop.svg"
@@ -11,7 +9,11 @@
   </div>
 </div>
 <div class="container-button">
-  <button>
+  <button
+    [ngClass]="{ disabledButton: isLoading }"
+    (click)="getAdvice()"
+    [disabled]="isLoading"
+  >
     <img src="./../../../assets/images/icon-dice.svg" aria-label="" />
   </button>
 </div>
