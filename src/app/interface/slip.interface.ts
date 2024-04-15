@@ -1,4 +1,6 @@
 export interface Slip {
-  id: number;
-  advice: string;
+  slip: {
+    id: number;
+    advice: string;
+  };
 }

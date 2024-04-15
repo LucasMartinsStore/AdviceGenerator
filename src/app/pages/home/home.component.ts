@@ -2,7 +2,6 @@ import { IsInternetService } from './../../shared/service/is-internet/is-interne
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',

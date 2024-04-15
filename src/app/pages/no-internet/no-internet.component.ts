@@ -1,5 +1,4 @@
 import { IsInternetService } from './../../shared/service/is-internet/is-internet.service';
-import { Router } from '@angular/router';
 import { TextStatic } from './../../shared/text-static/text-static';
 import { Component, OnInit } from '@angular/core';
 
