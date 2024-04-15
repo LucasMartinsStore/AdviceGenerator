@@ -14,11 +14,13 @@ export class CardComponent implements OnInit {
 
   constructor(private adviceService: AdviceService) {}
   ngOnInit(): void {
+    this.getAdvice();
+  }
+
+  getAdvice() {
     this.adviceService.getSlip().subscribe((data: Slip) => {
       console.log(data);
       this.slipList = data;
     });
   }
-
-  getAdvice() {}
 }
